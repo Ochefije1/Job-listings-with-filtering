@@ -1,27 +1,35 @@
-const newsletterForm = document.getElementById('newsletterForm');
-const emailInput = document.getElementById('emailInput');
-const successMessage = document.getElementById('successMessage');
-const emailDisplay = document.getElementById('emailDisplay');
+document.addEventListener('DOMContentLoaded', function () {
+  const filters = document.querySelectorAll('.filter');
+  const jobs = document.querySelectorAll('.job');
 
-newsletterForm.addEventListener('submit', function(event) {
-  event.preventDefault();
+  // Add click event listeners to each filter button
+  filters.forEach(filter => {
+    const buttons = filter.querySelectorAll('button');
+    buttons.forEach(button => {
+      button.addEventListener('click', function () {
+        const filterType = filter.dataset.filter;
+        const filterValue = button.dataset.value;
 
-  const email = emailInput.value;
+        // Remove 'active' class from all buttons in the current filter
+        buttons.forEach(btn => {
+          btn.classList.remove('active');
+        });
 
-  if (email === '') {
-    // Display validation message for empty email
-    alert('Please enter your email address.');
-  } else if (!validateEmail(email)) {
-    // Display validation message for invalid email format
-    alert('Please enter a valid email address.');
-  } else {
-    // Show success message with the entered email
-    emailDisplay.textContent = email;
-    successMessage.classList.remove('hidden');
-  }
+        // Add 'active' class to the clicked button
+        button.classList.add('active');
+
+        // Filter the jobs based on the selected filter
+        jobs.forEach(job => {
+          const value = job.dataset[filterType];
+
+          // Show the job if the filter value is 'all' or matches the job's value
+          if (filterValue === 'all' || filterValue === value) {
+            job.style.display = 'block';
+          } else {
+            job.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
 });
-
-function validateEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
