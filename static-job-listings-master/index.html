@@ -1,75 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="job.css">
-  <title>Job Listings</title>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>Job Listings</h1>
-      <div class="filters">
-        <div class="filter" data-filter="role">
-          <h3>Role</h3>
-          <button data-value="all" class="active">All</button>
-          <button data-value="frontend">Frontend</button>
-          <button data-value="backend">Backend</button>
-          <button data-value="fullstack">Fullstack</button>
-        </div>
-        <div class="filter" data-filter="level">
-          <h3>Level</h3>
-          <button data-value="all" class="active">All</button>
-          <button data-value="junior">Junior</button>
-          <button data-value="midweight">Midweight</button>
-          <button data-value="senior">Senior</button>
-        </div>
-        <div class="filter" data-filter="languages">
-          <h3>Languages</h3>
-          <button data-value="all" class="active">All</button>
-          <button data-value="python">Python</button>
-          <button data-value="ruby">Ruby</button>
-          <button data-value="javascript">JavaScript</button>
-          <button data-value="html">HTML</button>
-          <button data-value="css">CSS</button>
-        </div>
-        <div class="filter" data-filter="tools">
-          <h3>Tools</h3>
-          <button data-value="all" class="active">All</button>
-          <button data-value="react">React</button>
-          <button data-value="sass">Sass</button>
-          <button data-value="vue">Vue</button>
-          <button data-value="django">Django</button>
-          <button data-value="ror">RoR</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="job.css" />
+    <title>Job Listings</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Job Listings</h1>
+        <div class="filters">
+          <div class="filter" data-filter="role">
+            <h3>Role</h3>
+            <button data-value="all" class="active">All</button>
+            <button data-value="frontend">Frontend</button>
+            <button data-value="backend">Backend</button>
+            <button data-value="fullstack">Fullstack</button>
+          </div>
+          <div class="filter" data-filter="level">
+            <h3>Level</h3>
+            <button data-value="all" class="active">All</button>
+            <button data-value="junior">Junior</button>
+            <button data-value="midweight">Midweight</button>
+            <button data-value="senior">Senior</button>
+          </div>
+          <div class="filter" data-filter="languages">
+            <h3>Languages</h3>
+            <button data-value="all" class="active">All</button>
+            <button data-value="python">Python</button>
+            <button data-value="ruby">Ruby</button>
+            <button data-value="javascript">JavaScript</button>
+            <button data-value="html">HTML</button>
+            <button data-value="css">CSS</button>
+          </div>
+          <div class="filter" data-filter="tools">
+            <h3>Tools</h3>
+            <button data-value="all" class="active">All</button>
+            <button data-value="react">React</button>
+            <button data-value="sass">Sass</button>
+            <button data-value="vue">Vue</button>
+            <button data-value="django">Django</button>
+            <button data-value="ror">RoR</button>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-  <main>
-    <div class="container">
-      <div class="job-listings">
-        <div class="job" data-role="frontend" data-level="junior" data-languages="html" data-tools="css">
-          <div class="logo">
-            <img src="company-logo.jpg" alt="Company Logo">
+    </header>
+    <main>
+      <div class="container">
+        <div class="job-listings">
+          <div
+            class="job"
+            data-role="frontend"
+            data-level="junior"
+            data-languages="html"
+            data-tools="css"
+          >
+            <div class="job-details">
+              <h2>Frontend Developer</h2>
+              <p>Company Name</p>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+            <div class="job-cta">
+              <button>Apply Now</button>
+            </div>
           </div>
-          <div class="job-details">
-            <h2>Frontend Developer</h2>
-            <p>Company Name</p>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-            </ul>
-          </div>
-          <div class="job-cta">
-            <button>Apply Now</button>
-          </div>
+          <!-- Add more job listings here -->
         </div>
-        <!-- Add more job listings here -->
       </div>
-    </div>
-  </main>
-  <script src="job.js"></script>
-</body>
+    </main>
+    <script src="job.js"></script>
+  </body>
 </html>
-
