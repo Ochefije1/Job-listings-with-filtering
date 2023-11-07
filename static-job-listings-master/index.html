@@ -1,77 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Job Listings</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Frontend Mentor | Job Listings</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <header>
-      <div class="container">
-        <h1>Job Listings</h1>
-        <div class="filters">
-          <div class="filter" data-filter="role">
-            <h3>Role</h3>
-            <button data-value="all" class="active">All</button>
-            <button data-value="frontend">Frontend</button>
-            <button data-value="backend">Backend</button>
-            <button data-value="fullstack">Fullstack</button>
-          </div>
-          <div class="filter" data-filter="level">
-            <h3>Level</h3>
-            <button data-value="all" class="active">All</button>
-            <button data-value="junior">Junior</button>
-            <button data-value="midweight">Midweight</button>
-            <button data-value="senior">Senior</button>
-          </div>
-          <div class="filter" data-filter="languages">
-            <h3>Languages</h3>
-            <button data-value="all" class="active">All</button>
-            <button data-value="python">Python</button>
-            <button data-value="ruby">Ruby</button>
-            <button data-value="javascript">JavaScript</button>
-            <button data-value="html">HTML</button>
-            <button data-value="css">CSS</button>
-          </div>
-          <div class="filter" data-filter="tools">
-            <h3>Tools</h3>
-            <button data-value="all" class="active">All</button>
-            <button data-value="react">React</button>
-            <button data-value="sass">Sass</button>
-            <button data-value="vue">Vue</button>
-            <button data-value="django">Django</button>
-            <button data-value="ror">RoR</button>
-          </div>
+    <div class="container">
+      <header
+        class="flex justify-between items-center p-5 text-green-500 text-bold bg-gray-200"
+      >
+        <nav>
+          <ul class="main-menu flex gap-3">
+            <li><a href="./main.html">Home</a></li>
+            <li><a href="./jobs.html">Jobs</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div
+          class="search-bar flex items-center p-2 border border-gray-300 rounded"
+        >
+          <span class="mr-2">Search:</span>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Enter a job title"
+            class="outline-none"
+          />
         </div>
+      </header>
+      <div class="">
+        <img src="./images/bg-header-desktop.svg" alt="Banner" />
       </div>
-    </header>
-    <main>
-      <div class="container">
-        <div class="job-listings">
-          <div
-            class="job"
-            data-role="frontend"
-            data-level="junior"
-            data-languages="html"
-            data-tools="css"
-          >
-            <div class="job-details">
-              <h2>Frontend Developer</h2>
-              <p>Company Name: Bullseye Digital Manpower</p>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-              </ul>
-            </div>
-            <div class="job-cta">
-              <button>Apply Now</button>
-            </div>
-          </div>
+      <main id="display"></main>
+    </div>
+    <div id="content" class="p-5">
+      <h1 class="text-3xl font-bold text-green-600 mb-5">
+        Welcome to Samuel Job Filtering Website!
+      </h1>
+      <h2 class="font-bold text-green-600 text-x1">Easy Job Finding</h2>
+        <p>
+          We provide top-notch service to those looking for new employment
+          prospects with authentic, recent job openings obtained straight from
+          employers and recruiters.
+        </p>
+
+    </div>
+
+    <div id="job-listings" class="p-5">
+      <h2 class="text-xl font-bold text-green-600">Job Listings</h2>
+      <!-- Display the job listings here -->
+      <!-- HTML structure for job listings -->
+      <ul class="gap-3">
+        <div class="job-listing" data-category="frontend">
+          <li><h2 class="job-title font-bold">Frontend Developer</h2></li>
+          <p class="job-description">
+            <li>We are looking for a skilled frontend developer...</li>
+          </p>
         </div>
-      </div>
-    </main>
-    <script src="index.js"></script>
+
+        <div class="job-listing" data-category="backend">
+          <li><h2 class="job-title font-bold">Backend Developer</h2></li>
+          <li>
+            <p class="job-description">Join our backend development team...</p>
+          </li>
+        </div>
+      </ul>
+    </div>
+    <!-- HTML structure for filtering buttons -->
+    <div class="text-center py-8">
+      <button
+        type="button"
+        class="inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs text-green-500 font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+      >
+        <a href="./jobs.html" target="_blank" rel="noopener noreferrer"
+          >Get Started</a
+        >
+      </button>
+    </div>
+    <div class="attribution text-center text-sm bg-gray-200 p-3">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        class="text-blue-500"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Adikwu Samuel Ochefije</a>.
+    </div>
+    <script src="./data.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

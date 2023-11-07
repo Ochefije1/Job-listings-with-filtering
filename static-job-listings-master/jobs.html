@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Frontend Mentor | Job Listings</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #f2f2f2;
+      }
+
+      .main-menu {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .main-menu li {
+        margin: 0 10px;
+      }
+
+      .search-bar {
+        display: flex;
+        align-items: center;
+        padding: 6px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .search-bar input {
+        margin-left: 5px;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="main-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./jobs.html">Jobs</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- HTML structure for search input -->
+      <div class="search-bar">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for a job..."
+        />
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="banner" id="banner">
+        <!-- <img src="./images/bg-header-desktop.svg"/> -->
+      </div>
+      <main id="display"></main>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Adikwu Samuel Ochefije</a>.
+    </div>
+    <script src="./data.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
